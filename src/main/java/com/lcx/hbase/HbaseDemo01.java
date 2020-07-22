@@ -18,7 +18,7 @@ import java.util.List;
 public class HbaseDemo01 {
 
     //获取configuration对象
-    public static Configuration conf;
+    private static final Configuration conf;
 
     static {
         //使用HBaseConfiguration的单例方法实例化
@@ -211,6 +211,5 @@ public class HbaseDemo01 {
         //获取表中某一行指定"列簇：列"的数据
         //获取student表中”cf1：name“的值
         getRowQualifier("student","1001","cf1","name");
-
     }
 }
